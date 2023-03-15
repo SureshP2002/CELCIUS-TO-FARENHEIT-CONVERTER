@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Temperature Converter</title>
+   
+</head>
+<body id="temp" style="background-image:url(images/bg1.jpeg);" >
+    <div class="box">
+        <h1> Celsius to Fahrenheit</h1>
+        <div >
+            <input type="text" id="inp" placeholder="  Enter degree in celsius " >
+        </div>
+        <div id="">
+            <button type="submit"  onclick="converter()"> Convert To fahrenheit</button>
+        </div>
+       <div id="result">
+
+       </div>
+    </div>
+    <script>
+       function converter(){
+        const f = Number(document.getElementById("inp").value)
+        const c = (f*1.8)+32
+        const result = document.getElementById("result")
+        result.innerHTML = c.toFixed(2) + " deg F"
+      }
+      </script>
+</body>
+
+</html>
